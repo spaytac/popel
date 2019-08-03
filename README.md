@@ -5,6 +5,9 @@ popel is a fork which is based on Editorial, a news-oriented design built around
 **Demo (forked popel): https://aytac.kirmizi.online** 
 **Demo (original editorial): https://editorial.ghost.io**
 
+## What are the differences?
+Well, there are a few optical and a few technical changes.
+
 &nbsp;
 
 ![screenshot](https://user-images.githubusercontent.com/120485/49328081-0e192680-f59d-11e8-808a-e6d6bcfa8419.png)
