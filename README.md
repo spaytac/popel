@@ -8,6 +8,14 @@ popel is a fork which is based on Editorial, a news-oriented design built around
 ## What are the differences?
 Well, there are a few optical and a few technical changes.
 
+Changes:
+- `tags` - added tags to article and on alrticle listing (start page) 
+- `footer navigation` - added footer navigation (links from the navigation settings, which starts with ### will be automatically added to the footer nav)
+- `default full view` - start page opens with closed sidebar.
+- `custom sidebar for posts` - added custom sidebar for posts (shows author info, tags and provides social share ability).
+- `social share buttons` - added share buttons for posts
+- `tag listing page` - added a handlebars template for listing tags (you have to create a page with the name tags)
+
 &nbsp;
 
 ![screenshot](https://user-images.githubusercontent.com/120485/49328081-0e192680-f59d-11e8-808a-e6d6bcfa8419.png)
