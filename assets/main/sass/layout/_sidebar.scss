@@ -104,6 +104,22 @@
                     padding-left: 0.5em;
                 }
             }
+
+            .subscribe-form{
+                form{
+                    button{
+                        margin-top: 5%;
+                    }
+                }
+            }
+
+            #post_info{
+                .social-share{
+                    > a{
+                        padding-right: 5%;
+                    }
+                }
+            }
 		}
 
 		.toggle {
