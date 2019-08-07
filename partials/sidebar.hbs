@@ -20,6 +20,15 @@
             {{/foreach}}{{/if}}
         {{/get}}
 
+        {{!-- Email subscribe form at the bottom of the page --}}
+        {{#if @labs.subscribers}}
+        <section class="subscribe-form">
+            <h3 class="subscribe-form-title">{{t "Subscribe to {blogtitle}" blogtitle=@blog.title}}</h3>
+            <p>{{t "Get the latest posts delivered right to your inbox"}}</p>
+            {{subscribe_form placeholder="youremail@example.com"}}
+        </section>
+        {{/if}}
+
         {{!-- Footer --}}
         <footer id="footer">
             <p class="copyright">&copy; {{@site.title}} - All rights reserved<br>
