@@ -3,6 +3,6 @@
     var ak = win.ak;
 
     $('#sidebar').ready(function(){
-        ak.showSidebar();
+        //ak.showSidebar();
     });
 })(window, window.jQuery)
