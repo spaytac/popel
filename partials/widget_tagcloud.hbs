@@ -11,9 +11,18 @@
     {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
     {{#foreach tags}}
         <div class="tag-box">
-            <a href="{{ url }}" class="image fit">
-                <img src="{{img_url feature_image}}" alt="{{name}}">
-                <h2>{{ name }} <small>({{ count.posts }})</small></h2>
+            <a href="{{ url }}" class="tag-container">
+                <div class="tag-content">
+                    <div class="tag-content-title">{{ name }} ({{ count.posts }})</div>
+                    <div class="tag-content-description">{{ description }}</div>
+                </div>
+                <div class="tag-thumbnail">
+                    {{#if feature_image}}
+                    <img src="{{img_url feature_image}}">
+                    {{else}}
+                    <img class="no-tag-thumbnail" src="{{asset "images/pic05.jpg"}}">
+                    {{/if}}
+                </div>
             </a>
         </div>
     {{/foreach}}
