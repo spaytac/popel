@@ -62,5 +62,8 @@
   },
   "homepage": "https://github.com/spaytac/popel#readme",
   "main": "gulpfile.js",
-  "dependencies": {}
+  "dependencies": {
+    "global": "^4.4.0",
+    "gulp-cli": "^2.3.0"
+  }
 }
