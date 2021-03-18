@@ -20,14 +20,20 @@
             {{/foreach}}{{/if}}
         {{/get}}
 
-        {{!-- Email subscribe form at the bottom of the page --}}
-        {{#if @labs.subscribers}}
-        <section class="subscribe-form">
-            <h3 class="subscribe-form-title">{{t "Subscribe to {blogtitle}" blogtitle=@blog.title}}</h3>
-            <p>{{t "Get the latest posts delivered right to your inbox"}}</p>
-            {{subscribe_form placeholder="youremail@example.com"}}
+        {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
+        {{#unless @member}}
+        <section class="footer-cta">
+            <div class="inner">
+                <h2>Sign up for more like this.</h2>
+                <a class="footer-cta-button" href="#/portal">
+                    <div>Enter your email</div>
+                    <span>Subscribe</span>
+                </a>
+                {{!-- ^ This looks like a form element, but it's just a link to Portal,
+                making the form validation and submission much simpler. --}}
+            </div>
         </section>
-        {{/if}}
+        {{/unless}}
 
         {{!-- Footer --}}
         <footer id="footer">

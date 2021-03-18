@@ -2,9 +2,9 @@
   "name": "popel",
   "description": "This is popel (forked from Editorial https://editorial.ghost.io), a news-oriented theme for Ghost.",
   "demo": "https://aytac.kirmizi.online",
-  "version": "4.0.0",
+  "version": "2.0.0",
   "engines": {
-    "ghost": ">=2.0.0",
+    "ghost": ">=4.0.0",
     "ghost-api": "v4"
   },
   "license": "MIT",
@@ -16,6 +16,7 @@
     "zip": "gulp zip",
     "pretest": "gulp build",
     "test": "gscan .",
+    "test:ci": "gscan --fatal --verbose .",
     "preship": "yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
   },
@@ -44,7 +45,11 @@
     "url": "https://github.com/spaytac/popel/issues"
   },
   "contributors": [
-    "aytac <aytac@kirmizi.online> (https://twitter.com/aytac81)"
+    {
+      "url": "https://kirmizi.online",
+      "email": "aytac@kirmizi.online",
+      "name": "Aytac Kirmizi"
+    }
   ],
   "devDependencies": {
     "beeper": "^2.1.0",
@@ -64,6 +69,8 @@
   "main": "gulpfile.js",
   "dependencies": {
     "global": "^4.4.0",
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
   }
 }
