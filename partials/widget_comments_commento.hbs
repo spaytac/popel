@@ -1,0 +1,33 @@
+<div id="article-commento-loader" class="article-commento">
+    <a id="comment-loader" onclick="window.ak.loadComments()" class="commento-loader">
+        <span class="button loader-title">
+            {{t "loadComments"}}
+        </span>
+    </a>
+</div>
+<div class="article-commento-container">
+    <script defer src="https://commento.aytac.xyz/js/commento.js" data-css-override="{{asset "commento/css/commento.css"}}" data-auto-init="false"></script>
+    
+    <div id="commento"></div>
+</div>
+
+<script>
+    (function(win, $){
+        win.ak = win.ak || {};
+        var ak = win.ak;
+
+        $(document).ready(function(){
+            //ak.privacy();
+            //sconsole.log('document ready...');
+        });
+
+        $('div.article-commento').ready(function(){
+            //console.log('div ready...: ', ak.settings.commento.url);
+        });
+
+        ak.loadComments = function(){
+            win.commento.main();
+            $('#article-commento-loader')[0].hidden = true;
+        };
+    })(window, window.jQuery)
+</script>

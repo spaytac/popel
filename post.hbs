@@ -38,13 +38,16 @@ into the {body} of the default.hbs template --}}
         {{/if}}
 
         {{>widget_post_share}}
+        
+        {{>widget_comments_commento}}
 
     </footer>
 
-    <section class="article-comments gh-canvas">
-        <script defer src="https://commento.aytac.xyz/js/commento.js"></script>
+    {{!-- <section class="article-comments gh-canvas">
+        <script defer src="https://commento.aytac.xyz/js/commento.js" data-css-override="https://sample.nwxx.de/assets/main/css/commento.css" data-auto-init="true"></script>
+        
 		<div id="commento"></div>
-    </section>
+    </section> --}}
 
 </section>
 

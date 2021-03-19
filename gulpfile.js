@@ -36,8 +36,7 @@ function css(done) {
     pump([
         src('./assets/main/sass/*.scss', {sourcemaps: true}),
         sass({outputStyle: 'compressed'}).on('error', sass.logError),
-        //dest('assets/main/css', {sourcemaps: './'}),
-        dest('main/css/', {sourcemaps: '.'}),
+        dest('assets/main/css/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
 }
@@ -90,7 +89,7 @@ function zipper(done) {
 const cssWatcher = () => watch('./assets/main/sass/**/**', css);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, hbsWatcher);
-const build = series(css, js);
+const build = series(css);
 const dev = series(build, serve, watcher);
 
 exports.build = build;
