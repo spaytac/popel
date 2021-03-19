@@ -5,6 +5,7 @@
     "Subscribed!": "Subscribed!",
     "with the email address": "with the email address",
     "Your email address": "Your email address",
+    "Enter your Email":"Enter yout Email",
     "You've successfully subscribed to": "You've successfully subscribed to",
     "A collection of posts": "A collection of posts",
     "A collection of 1 post": "A collection of 1 post",
@@ -41,5 +42,6 @@
     "about this post": "About this Article",
     "about the author": "About the Author",
     "loadComments": "Load Comments...",
-    "menu": "Menu"
+    "menu": "Menu",
+    "subscribe text":"Sign up and stay tuned"
 }

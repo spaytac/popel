@@ -5,6 +5,7 @@
     "Subscribed!": "Abonniert!",
     "with the email address": "mit der Email Adresse",
     "Your email address": "Deine Email Adresse",
+    "Enter your Email":"Gib deine Email Adresse ein",
     "You've successfully subscribed to": "Erfolgreich abonniert! ",
     "A collection of posts": "Eine Auflistung von Arikeln",
     "A collection of 1 post": "Eine Auflistung von 1 Arikel",
@@ -41,5 +42,6 @@
     "about this post": "Zu diesem Artikel",
     "about the author": "Über den Autor",
     "loadComments": "Kommentare laden...",
-    "menu": "Menü"
+    "menu": "Menü",
+    "subscribe text":"Melde dich an und bleibe dran"
 }
