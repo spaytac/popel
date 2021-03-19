@@ -1,0 +1,12 @@
+{{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
+{{#unless @member}}
+<section class="subscription">
+    <div class="inner">
+        <h2>Sign up for more like this.</h2>
+        <a class="subscription-button" href="#/portal">
+            <div>Enter your email</div>
+            <span>Subscribe</span>
+        </a>
+    </div>
+</section>
+{{/unless}}

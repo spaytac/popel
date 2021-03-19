@@ -2,7 +2,7 @@
   "name": "popel",
   "description": "This is popel (forked from Editorial https://editorial.ghost.io), a news-oriented theme for Ghost.",
   "demo": "https://aytac.kirmizi.online",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"

@@ -2,7 +2,7 @@
 // --------------------------------------------
 
 #header .logo {
-    color: #3d4449;
+    color: _palette(fg-bold);
     font-weight: bold;
 }
 
@@ -26,16 +26,16 @@
 
 @include breakpoint('<=small') {
     #sidebar:not(.inactive) .toggle:before {
-        color: #fff;
+        color: _palette(bg);
     }
 
     #sidebar:not(.inactive) .toggle:after {
-        background: #f56a6a;
+        background: _palette(accent);
     }
 }
 
 #banner {
-    border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+    border-bottom: solid 2px _palette(border);
 }
 
 
@@ -55,7 +55,7 @@
     align-items: center;
     width: 100%;
     padding: 3rem 0;
-    border-top: solid 2px rgba(210, 215, 217, 0.75);
+    border-top: solid 2px _palette(border);
 }
 
 // Tag Archive
@@ -63,7 +63,7 @@
 
 .tag-header {
     padding: 5em 0 2em 0;
-    border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+    border-bottom: solid 2px _palette(border);
     text-align: center;
 }
 
@@ -76,7 +76,7 @@
     flex-direction: column;
     align-items: center;
     padding: 4em 0 3em 0;
-    border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+    border-bottom: solid 2px _palette(border);
     text-align: center;
 
 }
@@ -86,7 +86,7 @@
     margin: 0 0 15px 0;
     width: 100px;
     height: 100px;
-    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    box-shadow: _palette(fg-bold) 0 0 0 6px;
     display: block;
     background: #222;
     border-radius: 100%;
@@ -127,7 +127,7 @@
         line-height: 1em;
         font-weight: 300;
         text-transform: uppercase;
-        color: #999;
+        color: _palette(fg-light);
     }
 }
 
@@ -140,18 +140,18 @@
         line-height: 1em;
         font-weight: 300;
         text-transform: uppercase;
-        color: #999;
+        color: _palette(fg-light); 
         margin-bottom: 3px;
     }
 
     .social-share-link{
         padding-right: 2%;
         font-size: 2em;
-        color: #7f888f;
+        color: _palette(fg);
 
         &:hover{
-            border-bottom-color: #f56a6a;
-            color: #f56a6a !important;
+            border-bottom-color: _palette(accent);
+            color: _palette(accent) !important;
         }
     }
 }
@@ -173,11 +173,11 @@
 }
 
 .author-box:hover {
-    color: #212931 !important;
+    color: _palette(fg-bold) !important;
 }
 
 .author-box:hover .author-box-name {
-    color: #f56a6a;
+    color: _palette(accent);
     transition: color 0.2s ease;
 }
 
@@ -198,7 +198,7 @@
     line-height: 1em;
     font-weight: 300;
     text-transform: uppercase;
-    color: #999;
+    color: _palette(fg-light);
 }
 
 .author-box-name {

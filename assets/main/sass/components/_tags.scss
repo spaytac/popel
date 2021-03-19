@@ -11,7 +11,7 @@
     display: flex;
     text-decoration: none;
     min-height: 148px;
-    border: 1px solid rgba(210, 215, 217, 0.75);
+    border: 1px solid _palette(border);
     border-radius: .375em;
     box-sizing: border-box;
 
@@ -21,7 +21,7 @@
 }
 
 .tag-container:hover {
-    border-bottom-color: rgba(210, 215, 217, 0.75);
+    border-bottom-color: _palette(border);
 }
 
 .tag-content {
@@ -35,11 +35,11 @@
     .tag-content-title {
         font-weight: 600;
         line-height: 1.5em;
-        color: #3d4449;
+        color: _palette(fg-bold);
     }
 
     .tag-container:hover .tag-content-title {
-        color: #f56a6a;
+        color: _palette(accent);
     }
 
     @include breakpoint('<=xsmall') {
@@ -52,7 +52,7 @@
     font-size: 90%;
     font-weight: 400;
     line-height: 1.6em;
-    color: #7f888f;
+    color: _palette(fg);
     margin-top: 0.8rem;
     overflow-y: hidden;
     -webkit-line-clamp: 2;
@@ -107,14 +107,14 @@
         }
 
         .tag-title.button {
-            color: #7f888f !important;
-            box-shadow: inset 0 0 0 1px #7f888f;
+            color: _palette(fg) !important;
+            box-shadow: inset 0 0 0 1px _palette(fg);
             margin-top: 2%;
 
             &:hover{
-                background-color: rgba(245,106,106,0.05);
-                color: #f56a6a !important;
-                box-shadow: inset 0 0 0 1px #f56a6a;
+                background-color: _palette(bg-hover);
+                color: _palette(accent) !important;
+                box-shadow: inset 0 0 0 1px _palette(accent);
             }
         }
     }
