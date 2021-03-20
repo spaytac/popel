@@ -6,13 +6,98 @@
 
 /* Footer */
 
-	#footer {
-		.copyright {
-			color: _palette(fg-light);
-			font-size: 0.9em;
+	// #footer {
+	// 	.copyright {
+	// 		color: (--color-content-light);
+	// 		font-size: 0.9em;
 
+	// 		a {
+	// 			color: inherit;
+	// 		}
+	// 	}
+	// }
+
+	footer{
+		.site-footer{
+			@include padding(0, 6em);
+			border-top: 5px solid var(--ghost-accent-color);
+			margin: 0 auto;
+			max-width: 110em;
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 12px;
+			border-bottom: solid 5px var(--ghost-accent-color);
+			position: relative;
+			width: 90%;
+	
 			a {
-				color: inherit;
+				color:var(--color-content-light);
+	
+				&:hover{
+					color: var(--ghost-accent-color);
+				}
+			}
+	
+			.footer-copyright{
+				flex-shrink: 1;
+				position: relative;
+				padding-top: 15px;
+    			font-size: 10px;
+			}
+	
+			.footer-navigation{
+				flex-shrink: 1;
+				position: relative;
+				margin: 0;
+                padding: 0;
+                list-style-type: none;
+                float: left;
+                display: inline;
+                font-size: 0.9em;
+
+                li {
+                    float: left;
+                    display: inline;
+                    overflow: hidden;
+
+                    a {
+                        color: var(--color-content-light);
+                    }
+                }
+
+                li:nth-child(n+2){
+                    padding-left: 0.5em;
+                }
+			}
+		}
+
+		@include breakpoint('<=xlarge') {
+			> .site-footer {
+				@include padding(0, 5em);
+
+				// > div {
+				// 	@include padding(5em, 0);
+				// }
+			}
+		}
+
+		@include breakpoint('<=large') {
+			> .site-footer {
+				@include padding(0, 4em);
+
+				// > div {
+				// 	@include padding(4em, 0);
+				// }
+			}
+		}
+
+		@include breakpoint('<=small') {
+			> .site-footer {
+				@include padding(0, 2em);
+
+				// > div {
+				// 	@include padding(3em, 0);
+				// }
 			}
 		}
 	}

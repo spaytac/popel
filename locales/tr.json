@@ -5,6 +5,7 @@
     "Subscribed!": "abone eklendi!",
     "with the email address": "mail adresiyle",
     "Your email address": "Mail adresin",
+    "Enter your Email":"Mail adresin gir",
     "You've successfully subscribed to": "You've successfully subscribed to",
     "A collection of posts": "A collection of posts",
     "A collection of 1 post": "A collection of 1 post",
@@ -39,5 +40,8 @@
     "of": "of",
     "Published": "Published",
     "about this post": "About this Article",
-    "about the author": "About the Author"
+    "about the author": "About the Author",
+    "loadComments": "Yorumları yükle...",
+    "menu": "Menü",
+    "subscribe text":"Sign up and stay tuned"
 }

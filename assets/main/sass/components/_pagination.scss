@@ -34,15 +34,15 @@
 				text-align: center;
 
 				&.active {
-					background-color: _palette(accent);
-					color: _palette(bg) !important;
+					background-color: var(--ghost-accent-color);
+					color: var(--color-background-main) !important;
 
 					&:hover {
-						background-color: lighten(_palette(accent), 3);
+						background-color: lighten(_palette(fg-light), 3);
 					}
 
 					&:active {
-						background-color: darken(_palette(accent), 3);
+						background-color: darken(_palette(fg-light), 3);
 					}
 				}
 			}

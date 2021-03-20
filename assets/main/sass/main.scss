@@ -1,10 +1,16 @@
-@import 'libs/vars';
-@import 'libs/functions';
-@import 'libs/mixins';
-@import 'libs/vendor';
-@import 'libs/breakpoints';
-@import 'libs/html-grid';
-@import 'font-awesome.min.css';
+// @import 'libs/vars';
+// @import 'libs/functions';
+// @import 'libs/mixins';
+// @import 'libs/vendor';
+// @import 'libs/breakpoints';
+// @import 'libs/html-grid';
+@import '../../global/sass/libs/vars';
+@import '../../global/sass/libs/functions';
+@import '../../global/sass/libs/mixins';
+@import '../../global/sass/libs/vendor';
+@import '../../global/sass/libs/breakpoints';
+@import '../../global/sass/libs/html-grid';
+@import '../../global/css/font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700');
 
 /*
@@ -52,6 +58,9 @@
 	@import 'components/posts';
 	@import 'components/tags';
 	@import 'components/bannercards';
+	@import 'components/commento-loader';
+	@import 'components/subscription';
+	@import 'components/post';
 
 // Layout.
 

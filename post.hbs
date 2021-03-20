@@ -7,7 +7,7 @@ into the {body} of the default.hbs template --}}
 
 {{#post}}
 {{!-- Everything inside the #post tags pulls data from the post --}}
-<section>
+<section class="post-container">
 
     <header class="main content">
         <span class="date">{{date format="MMMM D, YYYY"}}</span>
@@ -25,27 +25,7 @@ into the {body} of the default.hbs template --}}
         {{content}}
     </div>
 
-    <footer class="post-footer">
-
-        <div class="authors">
-            {{#foreach authors}}
-                {{>widget_authorinfo}}
-            {{/foreach}}
-        </div>
-
-        {{#if tags}}
-            {{>widget_tags}}
-        {{/if}}
-
-        {{>widget_post_share}}
-
-    </footer>
-
-    {{!--
-    <section class="post-full-comments">
-        If you want to embed comments, this is a good place to do it!
-    </section>
-    --}}
+    {{>widget_post_footer}}
 
 </section>
 

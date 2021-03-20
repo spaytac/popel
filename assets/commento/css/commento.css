@@ -1,0 +1,226 @@
+.commento-load {
+    color: var(--color-content-main) !important;
+    box-shadow: inset 0 0 0 1px var(--color-content-main);
+    margin-top: 2%;
+}
+
+.commento-root {
+    overflow-x: hidden;
+    padding: 0;
+    font-family: inherit;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.commento-root * {
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #50596c;
+    text-rendering: optimizeLegibility;
+}
+
+.commento-root .commento-error-box {
+    width: 100%;
+    border-radius: 5px;
+    height: 32px;
+    text-align: center;
+    color: #f03e3e;
+    font-weight: 700;
+}
+
+.commento-root-font *{
+	font-family: inherit;
+}
+
+.commento-root .commento-main-area {
+    transition: filter .2s;
+}
+
+.commento-root textarea {
+    display: inline-block;
+    white-space: pre-wrap;
+    padding: 8px;
+    outline: 0;
+    overflow: auto;
+    min-height: 130px;
+    width: 100%;
+    box-shadow: none;
+}
+
+.commento-root .commento-login .commento-login-text {
+    text-align: right;
+    margin-right: 16px;
+    height: 38px;
+    color: #868e96;
+    font-weight: 700;
+    cursor: pointer;
+    display: block;
+}
+
+.commento-root .commento-mod-tools button {
+    text-transform: uppercase;
+    color: #495057;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 12px;
+    background: 0 0;
+    border: none;
+    display: inline;
+}
+
+.commento-root .commento-button-margin {
+    padding-top: 4px;
+}
+
+.commento-root .commento-textarea-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commento-root a {
+    color: #228be6;
+    outline: 0;
+    text-decoration: none;
+}
+
+.commento-root .commento-markdown-button b {
+    font-size: 12px;
+}
+
+.commento-root .commento-footer {
+    margin: 36px 0 12px;
+    padding-right: 12px;
+}
+
+.commento-root .commento-footer .commento-logo-container {
+    float: right;
+}
+
+.commento-root .commento-footer .commento-logo-container .commento-logo {
+    border: none;
+    width: auto;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.commento-root .commento-footer .commento-logo-container .commento-logo-text {
+    font-size: 13px;
+    color: #495057;
+    display: inline;
+    line-height: 24px;
+    position: relative;
+    font-weight: 700;
+}
+
+.commento-root .commento-submit-button:hover{
+	background-color: var(--color-background-hover);
+    color: var(--ghost-accent-color) !important;
+    box-shadow: inset 0 0 0 1px var(--ghost-accent-color);
+}
+
+.commento-root .commento-submit-button {
+    float: right;
+    background: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.commento-root .commento-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 12px;
+    padding: 6px 8px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2%;
+    color: var(--color-content-main) !important;
+    box-shadow: inset 0 0 0 1px var(--color-content-main);
+}
+
+/**/
+
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-google-button,
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-twitter-button,
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-github-button,
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-gitlab-button {
+    background: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    width: 80px;
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-google-button:hover {
+    background-color: var(--color-google-bg);
+    color: var(--color-google-fg) !important;
+    box-shadow: inset 0 0 0 1px var(--color-google-fg);
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-twitter-button:hover {
+    background-color: var(--color-twitter-bg);
+    color: var(--color-twitter-fg) !important;
+    box-shadow: inset 0 0 0 1px var(--color-twitter-fg);
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-github-button:hover {
+    background-color: var(--color-github-bg);
+    color: var(--color-github-fg) !important;
+    box-shadow: inset 0 0 0 1px var(--color-github-fg);
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-oauth-buttons-container .commento-oauth-buttons .commento-gitlab-button:hover {
+    background-color: var(--color-background-hover);
+    color: var(--ghost-accent-color) !important;
+    box-shadow: inset 0 0 0 1px var(--ghost-accent-color);
+}
+
+.commento-root .commento-login-box-container .commento-login-box button, .commento-root .commento-login-box-container .commento-login-box input, .commento-root .commento-login-box-container .commento-login-box textarea {
+    font-family: inherit;
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-email-button {
+    height: 40px;
+    min-width: 110px;
+    float: right;
+    background: none;
+    border: none;
+    outline: 0;
+    padding: 0 10px;
+    border-left: 1px solid #f1f3f5;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all .2s;
+    width: unset;
+    color: var(--color-content-main) !important;
+    box-shadow: inset 0 0 0 1px var(--color-content-main);
+}
+
+.commento-root .commento-login-box-container .commento-login-box .commento-email-container .commento-email .commento-email-button:hover{
+    background-color: var(--color-background-hover);
+    color: var(--ghost-accent-color) !important;
+    box-shadow: inset 0 0 0 1px var(--ghost-accent-color);
+}
+
+.commento-root .commento-login-box-container .commento-login-box button, .commento-root .commento-login-box-container .commento-login-box input, .commento-root .commento-login-box-container .commento-login-box textarea {
+    font-family: inherit;
+}
+
+.commento-login-box input:focus {
+    box-shadow: none;
+}

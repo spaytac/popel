@@ -12,13 +12,13 @@
 
 		li {
 			@include icon;
-			border-top: solid 1px _palette(border);
+			border-top: solid 1px var(--color-border);
 			margin: 1.5em 0 0 0;
 			padding: 1.5em 0 0 3em;
 			position: relative;
 
 			&:before {
-				color: _palette(accent);
+				color: var(--ghost-accent-color);
 				display: inline-block;
 				font-size: 1.5em;
 				height: 1.125em;
