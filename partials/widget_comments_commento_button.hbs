@@ -6,10 +6,10 @@
     </a>
 </div>
 <div id="article-commento-container" class="article-commento-container">
-    <script defer src="https://commento.aytac.xyz/js/commento.js" data-css-override="{{asset "commento/css/commento.css"}}" data-auto-init="false"></script>
     
     <div id="commento"></div>
 </div>
+
 
 <script>
     (function(win, $){
@@ -17,7 +17,22 @@
         var ak = win.ak;
 
         var loadComments = function(){
-            win.commento.main();
+            var absoluteUrl = win.commento_url + '/js/commento.js';
+            var tag = document.createElement('script');
+            tag.src = absoluteUrl;
+            tag.setAttribute('defer','');
+
+            var cssUrl = '/assets/commento/css/commento.css';
+
+            if(typeof commento_css != 'undefined'){
+                cssUrl = commento_css;
+            }
+            if(cssUrl){
+                tag.setAttribute('data-css-override',cssUrl);
+            }
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            //win.commento.main();
             $('#article-commento-loader')[0].hidden = true;
         };
 
@@ -27,9 +42,6 @@
                 $('#article-commento-loader')[0].remove();
                 $('#article-commento-container')[0].remove();
             } else{
-                var absoluteUrl = commento_url + "/js/commento.js";
-                $('#article-commento-container>script')[0].src = absoluteUrl;
-
                 if(typeof commento_auto != 'undefined' && commento_auto != '' && (commento_auto == 'true' || commento_auto == true)) {
                     loadComments();
                 }
