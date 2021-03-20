@@ -1,0 +1,77 @@
+///
+/// Editorial by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+/// this file was added by Aytac Kirmizi
+
+/* subscription */
+
+.subscription{
+    position: relative;
+    padding: 9vmin 4vmin 10vmin;
+    color: var(--color-background-main);
+    text-align: center;
+    background: var(--color-darkgrey);
+
+    .inner{
+        margin: 0 auto;
+        width: 100%;
+
+        h2 {
+            margin: 0 0 30px;
+            font-size: 25px;
+            color: var(--color-content-bold);
+        }
+        .subscription-button{
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 400px;
+            padding: 0px 0px 0px 4px;
+            font-size: 15px;
+            font-family: _font(family-heading);
+            color: var(--color-midgrey);
+            background: _palette(bg-alt);
+            border-radius: 8px;
+            border-bottom: none;
+
+            span{
+                display: inline-block;
+                padding: 10px 20px;
+                font-weight: 700;
+                border-radius: 5px;
+                box-shadow: inset 0 0 0 3px var(--color-subscribe-fg);
+                color: var(--color-subscribe-fg) !important;
+                background-color: var(--color-background-main);
+                text-transform: uppercase;
+                letter-spacing: .075em;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: var(--color-subscribe-bg);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint('<=medium') {
+    .subscription{
+        .inner{
+            h2{
+                font-size: 20px;
+            }
+
+            .subscription-button{
+                display: initial;
+
+                div{
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -9,7 +9,7 @@
 	#menu {
 		ul {
 			@include vendor('user-select', 'none');
-			color: _palette(fg-bold);
+			color: var(--color-content-bold);
 			font-family: _font(family-heading);
 			font-family: _font(weight-heading-alt);
 			letter-spacing: _font(kerning-heading);
@@ -27,7 +27,7 @@
 				padding: 0.625em 0;
 
 				&:hover {
-					color: _palette(accent);
+					color: var(--ghost-accent-color);
 				}
 
 				&.opener {
@@ -41,7 +41,7 @@
 							'color #{_duration(transition)} ease-in-out',
 							'transform #{_duration(transition)} ease-in-out'
 						));
-						color: _palette(fg-light);
+						color: (--color-content-light);
 						content: '\f078';
 						position: absolute;
 						right: 0;
@@ -49,7 +49,7 @@
 
 					&:hover {
 						&:before {
-							color: _palette(accent);
+							color: var(--ghost-accent-color);
 						}
 					}
 
@@ -68,12 +68,14 @@
 
 		> ul {
 			> li {
-				border-top: solid 1px _palette(border);
-				margin: 0.5em 0 0 0;
+				border-top: solid 1px var(--color-border);
 				padding: 0.5em 0 0 0;
+				font-size: 15px;
+				font-weight: 600;
+				color: var(--color-content-bold);
 
 				> ul {
-					color: _palette(fg-light);
+					color: (--color-content-light);
 					display: none;
 					margin: 0.5em 0 1.5em 0;
 					padding-left: 1em;

@@ -34,7 +34,7 @@
 		}
 
 	body {
-		background: _palette(bg);
+		background: var(--color-background-main);
 
 		// Stops initial animations until page loads or stops resizing.
 			&.is-preload,
@@ -46,3 +46,8 @@
 			}
 
 	}
+
+	img {
+        max-width: 100%;
+        height: auto;
+    }

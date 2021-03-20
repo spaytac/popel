@@ -2,10 +2,12 @@ const {series, watch, src, dest, parallel} = require('gulp');
 const pump = require('pump');
 
 // gulp plugins and utils
-var livereload = require('gulp-livereload');
-var sass = require('gulp-sass');
-var zip = require('gulp-zip');
-var beeper = require('beeper');
+const livereload = require('gulp-livereload');
+const sass = require('gulp-sass');
+const zip = require('gulp-zip');
+const beeper = require('beeper');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
 function serve(done) {
     livereload.listen();
@@ -34,7 +36,36 @@ function css(done) {
     pump([
         src('./assets/main/sass/*.scss', {sourcemaps: true}),
         sass({outputStyle: 'compressed'}).on('error', sass.logError),
-        dest('assets/main/css', {sourcemaps: './'}),
+        dest('assets/main/css/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
+function js(done) {
+    pump([
+        src([
+            // pull in lib files first so our own code can depend on it
+            'assets/main/js/*.js',
+            '!assets/main/js/pagetags.js',
+            '!assets/main/js/post.js',
+            '!assets/main/js/showsidebar.js'
+        ], {sourcemaps: true}),
+        concat('popel.js'),
+        uglify(),
+        dest('assets/built/', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
+function jslib(done) {
+    pump([
+        src([
+            // pull in lib files first so our own code can depend on it
+            'assets/main/js/lib/*.js'
+        ], {sourcemaps: true}),
+        concat('lib.js'),
+        uglify(),
+        dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
 }

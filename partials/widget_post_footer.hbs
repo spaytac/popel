@@ -1,0 +1,26 @@
+<div class="post-footer">
+    <div class="post-related">
+        <div class="authors">
+        {{#foreach authors}}
+            {{>widget_authorinfo}}
+        {{/foreach}}
+        </div>
+
+
+        {{#if tags}}
+        <div class="post-tags">
+            {{>widget_tags}}
+        </div>
+        {{/if}}
+        {{>widget_post_share}}
+    </div>
+
+    <div class="subscription">
+        {{>widget_subscription}}
+    </div>
+
+    <div class="post-social-container">
+        {{>widget_comments_commento_button}}
+    </div>
+
+</div>

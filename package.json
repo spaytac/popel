@@ -2,10 +2,10 @@
   "name": "popel",
   "description": "This is popel (forked from Editorial https://editorial.ghost.io), a news-oriented theme for Ghost.",
   "demo": "https://aytac.kirmizi.online",
-  "version": "1.1.1",
+  "version": "4.0.0",
   "engines": {
-    "ghost": ">=2.0.0",
-    "ghost-api": "v2"
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
   },
   "license": "MIT",
   "screenshots": {
@@ -16,10 +16,15 @@
     "zip": "gulp zip",
     "pretest": "gulp build",
     "test": "gscan .",
+    "test:ci": "gscan --fatal --verbose .",
     "preship": "yarn test",
     "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; fi"
   },
-  "author": "Ghost Foundation <hello@ghost.org> (https://ghost.org)",
+  "author": {
+    "url": "https://kirmizi.online",
+    "email": "aytac@kirmizi.online",
+    "name": "Aytac Kirmizi"
+  },
   "gpm": {
     "type": "theme",
     "categories": [
@@ -40,23 +45,32 @@
     "url": "https://github.com/spaytac/popel/issues"
   },
   "contributors": [
-    "aytac <aytac@kirmizi.online> (https://twitter.com/aytac81)"
+    {
+      "url": "https://kirmizi.online",
+      "email": "aytac@kirmizi.online",
+      "name": "Aytac Kirmizi"
+    }
   ],
   "devDependencies": {
-    "beeper": "^1.1.1",
-    "gscan": "^2.0.0",
-    "gulp": "^4.0.0",
+    "beeper": "^2.1.0",
+    "gscan": "^4.0.1",
+    "gulp": "^4.0.2",
     "gulp-livereload": "^4.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-watch": "5.0.1",
-    "gulp-zip": "4.2.0",
-    "node-sass": "^4.10.0"
+    "gulp-zip": "^5.1.0",
+    "node-sass": "^5.0.0"
   },
   "config": {
     "posts_per_page": 6
   },
   "homepage": "https://github.com/spaytac/popel#readme",
   "main": "gulpfile.js",
-  "dependencies": {}
+  "dependencies": {
+    "global": "^4.4.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
+  }
 }
