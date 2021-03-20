@@ -18,15 +18,15 @@
         margin: 0 1% 0 0;
 
         .loader-title {
-            color: _palette(fg) !important;
-            box-shadow: inset 0 0 0 1px _palette(fg);
+            color: var(--color-content-main) !important;
+            box-shadow: inset 0 0 0 1px var(--color-content-main);
             margin-top: 2%;
             font-size: 13px;
 
             &:hover{
-                background-color: _palette(bg-hover);
-                color: _palette(accent) !important;
-                box-shadow: inset 0 0 0 1px _palette(accent);
+                background-color: var(--color-background-hover);
+                color: var(--ghost-accent-color) !important;
+                box-shadow: inset 0 0 0 1px var(--ghost-accent-color);
             }
         }
     }

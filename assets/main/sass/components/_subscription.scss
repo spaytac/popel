@@ -10,7 +10,7 @@
 .subscription{
     position: relative;
     padding: 9vmin 4vmin 10vmin;
-    color: _palette(bg);
+    color: var(--color-background-main);
     text-align: center;
     background: var(--color-darkgrey);
 
@@ -21,7 +21,7 @@
         h2 {
             margin: 0 0 30px;
             font-size: 25px;
-            color: _palette(fg-bold);
+            color: var(--color-content-bold);
         }
         .subscription-button{
             position: relative;
@@ -43,17 +43,33 @@
                 padding: 10px 20px;
                 font-weight: 700;
                 border-radius: 5px;
-                box-shadow: inset 0 0 0 1px _palette(fg);
-                color: _palette(fg) !important;
-                background-color: _palette(bg);
+                box-shadow: inset 0 0 0 3px var(--color-subscribe-fg);
+                color: var(--color-subscribe-fg) !important;
+                background-color: var(--color-background-main);
                 text-transform: uppercase;
                 letter-spacing: .075em;
                 text-decoration: none;
 
                 &:hover {
-                    background-color: _palette(bg-hover);
-                    color: _palette(accent) !important;
-                    box-shadow: inset 0 0 0 1px _palette(accent);
+                    background-color: var(--color-subscribe-bg);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint('<=medium') {
+    .subscription{
+        .inner{
+            h2{
+                font-size: 20px;
+            }
+
+            .subscription-button{
+                display: initial;
+
+                div{
+                    display: none;
                 }
             }
         }

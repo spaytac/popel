@@ -2,7 +2,7 @@
 // --------------------------------------------
 
 #header .logo {
-    color: _palette(fg-bold);
+    color: var(--color-content-bold);
     font-weight: bold;
 }
 
@@ -26,16 +26,16 @@
 
 @include breakpoint('<=small') {
     #sidebar:not(.inactive) .toggle:before {
-        color: _palette(bg);
+        color: var(--color-background-main);
     }
 
     #sidebar:not(.inactive) .toggle:after {
-        background: _palette(accent);
+        background: var(--ghost-accent-color);
     }
 }
 
 #banner {
-    border-bottom: solid 2px _palette(border);
+    border-bottom: solid 2px var(--color-border);
 }
 
 
@@ -55,7 +55,7 @@
     align-items: center;
     width: 100%;
     padding: 3rem 0;
-    border-top: solid 2px _palette(border);
+    border-top: solid 2px var(--color-border);
 }
 
 // Tag Archive
@@ -63,7 +63,7 @@
 
 .tag-header {
     padding: 5em 0 2em 0;
-    border-bottom: solid 2px _palette(border);
+    border-bottom: solid 2px var(--color-border);
     text-align: center;
 }
 
@@ -76,7 +76,7 @@
     flex-direction: column;
     align-items: center;
     padding: 4em 0 3em 0;
-    border-bottom: solid 2px _palette(border);
+    border-bottom: solid 2px var(--color-border);
     text-align: center;
 
 }
@@ -86,7 +86,7 @@
     margin: 0 0 15px 0;
     width: 100px;
     height: 100px;
-    box-shadow: _palette(fg-bold) 0 0 0 6px;
+    box-shadow: var(--color-content-bold) 0 0 0 6px;
     display: block;
     background: #222;
     border-radius: 100%;
@@ -127,7 +127,7 @@
         line-height: 1em;
         font-weight: 300;
         text-transform: uppercase;
-        color: _palette(fg-light);
+        color: (--color-content-light);
     }
 }
 
@@ -140,18 +140,18 @@
         line-height: 1em;
         font-weight: 300;
         text-transform: uppercase;
-        color: _palette(fg-light); 
+        color: (--color-content-light); 
         margin-bottom: 3px;
     }
 
     .social-share-link{
         padding-right: 2%;
         font-size: 2em;
-        color: _palette(fg);
+        color: var(--color-content-main);
 
         &:hover{
-            border-bottom-color: _palette(accent);
-            color: _palette(accent) !important;
+            border-bottom-color: var(--ghost-accent-color);
+            color: var(--ghost-accent-color) !important;
         }
     }
 }
@@ -160,7 +160,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 -40px;
+    width: 100%;
 }
 
 .author-box  {
@@ -168,16 +168,16 @@
     display: inline-flex;
     align-items: flex-start;
     padding: 5px 20px;
-    margin: 0 20px 20px;
+    margin: 0px 0px 15px;
     border: none;
 }
 
 .author-box:hover {
-    color: _palette(fg-bold) !important;
+    color: var(--color-content-bold) !important;
 }
 
 .author-box:hover .author-box-name {
-    color: _palette(accent);
+    color: var(--ghost-accent-color);
     transition: color 0.2s ease;
 }
 
@@ -198,7 +198,7 @@
     line-height: 1em;
     font-weight: 300;
     text-transform: uppercase;
-    color: _palette(fg-light);
+    color: (--color-content-light);
 }
 
 .author-box-name {

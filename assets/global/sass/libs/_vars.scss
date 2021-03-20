@@ -1,3 +1,81 @@
+:root {
+	--color-background-main: #ffffff;
+	--color-background-alt: #f5f6f7;
+	--color-background-hover: rgba(245,106,106,0.05);
+	--color-background-contrast: #020202;
+	--color-content-main: #7f888f;
+	--color-content-bold: #3d4449;
+	--color-content-light: #9fa3a6;
+	--color-border: rgba(210,215,217,0.75);
+	--color-border-bg: transparentize(#e6ebed, 0.75);
+	--color-subscribe-fg: #008800a3;
+	--color-subscribe-bg: rgba(0, 136, 0, 0.2);
+	--color-google-fg: #dd4b39;
+	--color-google-bg: rgba(221, 75, 57, 0.05);
+	--color-twitter-fg: #00aced;
+	--color-twitter-bg: rgba(0, 172, 237, 0.05);
+	--color-github-fg: #000;
+	--color-github-bg: rgba(0, 0, 0, 0.05);
+	--color-gitlab-fg: #f56a6a;
+	--color-gitlab-bg: rgba(245,106,106,0.05);
+
+	--color-background-overlay: rgba(37,40,43,0.9);
+	--color-content-lead: #000;
+	--color-content-secondary: #73777D;
+  }
+  
+  .theme-dark:root {
+	--color-background-main: #222426;
+	--color-background-alt: #1D1F20;
+	--color-background-contrast: #3B3D40;
+	--color-content-main: #E1E3E6;
+	--color-content-bold: #909499;
+	--color-content-light: #9fa3a6;
+	--color-border: rgba(210,215,217,0.75);
+	--color-border-bg: transparentize(#e6ebed, 0.75);
+	--color-subscribe-fg: #008800a3;
+	--color-subscribe-bg: rgba(0, 136, 0, 0.2);
+	--color-google-fg: #dd4b39;
+	--color-google-bg: rgba(221, 75, 57, 0.05);
+	--color-twitter-fg: #00aced;
+	--color-twitter-bg: rgba(0, 172, 237, 0.05);
+	--color-github-fg: #000;
+	--color-github-bg: rgba(0, 0, 0, 0.05);
+	--color-gitlab-fg: #f56a6a;
+	--color-gitlab-bg: rgba(245,106,106,0.05);
+	
+	--color-background-overlay: rgba(9,10,13,0.9);
+	--color-content-lead: #FFF;
+	--color-content-secondary: #909499;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+	html:not(.theme-light):root {
+	  --color-background-main: #222426;
+	  --color-background-alt: #1D1F20;
+	  --color-background-contrast: #3B3D40;
+	  --color-content-main: #E1E3E6;
+	  --color-content-bold: #909499;
+	  --color-content-light: #9fa3a6;
+	  --color-border: rgba(210,215,217,0.75);
+	  --color-border-bg: transparentize(#e6ebed, 0.75);
+	  --color-subscribe-fg: #008800a3;
+	  --color-subscribe-bg: rgba(0, 136, 0, 0.2);
+	  --color-google-fg: #dd4b39;
+	  --color-google-bg: rgba(221, 75, 57, 0.05);
+	  --color-twitter-fg: #00aced;
+	  --color-twitter-bg: rgba(0, 172, 237, 0.05);
+	  --color-github-fg: #000;
+	  --color-github-bg: rgba(0, 0, 0, 0.05);
+	  --color-gitlab-fg: #f56a6a;
+	  --color-gitlab-bg: rgba(245,106,106,0.05);
+
+	  --color-background-overlay: rgba(9,10,13,0.9);
+	  --color-content-lead: #FFF;
+	  --color-content-secondary: #909499;
+	}
+  }
+
 // Misc.
 	$misc: (
 		z-index-base:		10000
@@ -33,21 +111,7 @@
 
 // Palette.
 	$palette: (
-		bg:					#ffffff,
-		bg-alt:				#f5f6f7,
-		fg:					#7f888f,
-		fg-bold:			#3d4449,
+		bg-alt:             #f5f6f7,
 		fg-light:			#9fa3a6,
-		border:				rgba(210,215,217,0.75),
-		border-bg:			transparentize(#e6ebed, 0.75),
-		accent:				#f56a6a,
-		bg-hover: 			rgba(245,106,106,0.05),
-		google-bg:			rgba(221, 75, 57, 0.05),
-		google-fg:          #dd4b39,
-		twitter-bg:			rgba(0, 172, 237, 0.05),
-		twitter-fg:         #00aced,
-		github-bg:			rgba(0, 0, 0, 0.05),
-		github-fg:          #000,
-		gitlab-bg:			rgba(245,106,106,0.05),
-		gitlab-fg:          #f56a6a
+		bg-hover: 			rgba(245,106,106,0.05)
 	);

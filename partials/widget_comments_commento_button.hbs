@@ -1,0 +1,43 @@
+<div id="article-commento-loader" class="article-commento">
+    <a id="comment-loader" onclick="window.ak.loadComments()" class="commento-loader">
+        <span class="button loader-title">
+            {{t "loadComments"}}
+        </span>
+    </a>
+</div>
+<div id="article-commento-container" class="article-commento-container">
+    <script defer src="https://commento.aytac.xyz/js/commento.js" data-css-override="{{asset "commento/css/commento.css"}}" data-auto-init="false"></script>
+    
+    <div id="commento"></div>
+</div>
+
+<script>
+    (function(win, $){
+        win.ak = win.ak || {};
+        var ak = win.ak;
+
+        var loadComments = function(){
+            win.commento.main();
+            $('#article-commento-loader')[0].hidden = true;
+        };
+
+        $(document).ready(function(){
+
+            if(typeof commento_url == 'undefined' || commento_url == '') {
+                $('#article-commento-loader')[0].remove();
+                $('#article-commento-container')[0].remove();
+            } else{
+                var absoluteUrl = commento_url + "/js/commento.js";
+                $('#article-commento-container>script')[0].src = absoluteUrl;
+
+                if(typeof commento_auto != 'undefined' && commento_auto != '' && (commento_auto == 'true' || commento_auto == true)) {
+                    loadComments();
+                }
+            }
+        });
+
+        ak.loadComments = function(){
+            loadComments();
+        };
+    })(window, window.jQuery)
+</script>

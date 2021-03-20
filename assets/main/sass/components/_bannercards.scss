@@ -7,7 +7,7 @@
 /* Banner Cards */
 
 .kg-bookmark-card {
-    background: _palette(bg);
+    background: var(--color-background-main);
     width: 100%;
 }
 
@@ -15,7 +15,7 @@
     display: flex;
     text-decoration: none;
     min-height: 148px;
-    border: 1px solid _palette(border);
+    border: 1px solid var(--color-border);
     border-radius: .375em;
     box-sizing: border-box;
 
@@ -25,7 +25,7 @@
 }
 
 .kg-bookmark-container:hover {
-    border-bottom-color: _palette(border);
+    border-bottom-color: var(--color-border);
 }
 
 .kg-bookmark-content {
@@ -44,11 +44,11 @@
 .kg-bookmark-title {
     font-weight: 600;
     line-height: 1.5em;
-    color: _palette(fg-bold);
+    color: var(--color-content-bold);
 }
 
 .kg-bookmark-container:hover .kg-bookmark-title {
-    color: _palette(accent);
+    color: var(--ghost-accent-color);
 }
 
 .kg-bookmark-description {
@@ -56,7 +56,7 @@
     font-size: 90%;
     font-weight: 400;
     line-height: 1.6em;
-    color: _palette(fg);
+    color: var(--color-content-main);
     margin-top: 0.8rem;
     overflow-y: hidden;
     -webkit-line-clamp: 2;
@@ -95,7 +95,7 @@
     align-items: center;
     font-size: 90%;
     line-height: 1.6em;
-    color: _palette(fg);
+    color: var(--color-content-main);
     margin-top: 1rem;
     flex-wrap: wrap;
 }

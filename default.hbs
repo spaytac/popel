@@ -58,26 +58,25 @@
         {{>sidebar}}
         {{/sidebar-block}}
 
-        {{!-- The global footer at the very bottom of the screen --}}
-        {{!-- <footer class="site-footer outer">
-            <div class="inner">
-                <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
-                <nav class="site-footer-nav">
-                    {{navigation type="secondary"}}
-                </nav>
-                <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
-            </div>
-        </footer> --}}
-
     </div>
 
     {{!-- Theme Scripts --}}
-    {{!-- <script src="{{asset "main/js/customlinks.js"}}"></script> --}}
     <script src="{{asset "main/js/util.js"}}"></script>
     <script src="{{asset "main/js/main.js"}}"></script>
 
     {{!-- Ghost outputs important scripts & data with the {ghost_foot} tag
     it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
+    
 </body>
+        
+<footer>
+    <div class="site-footer">
+        <div class="footer-copyright">
+            <p class="copyright">&copy; {{@site.title}} - All rights reserved 
+            Design: <a href="https://html5up.net" target="_blank" rel="noopener">HTML5 UP</a>, Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+            </p>
+        </div>
+    </div>
+</footer>
 </html>
